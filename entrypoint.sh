@@ -4,18 +4,17 @@
 set -eu
 
 if [ $4 = "sftp" ]; then
-  PORT="22"
   echo "Establishing SFTP connection..."
   sshpass -p $3 sftp -o StrictHostKeyChecking=no -P $PORT $2@$1
   echo "Connection established"
 else
-  PORT="21"
+  
 fi;
 
-echo "Using $4 to connect to port $PORT"
+echo "Using $4 to connect to port"
 
 echo "Uploading files..."
-lftp $4://$1:$PORT -u $2,$3 -e "set ftp:ssl-allow no; mirror -R -P 10 -e $5 $6; quit"
+lftp $4://$1:$ -u $2,$3 -e "set ftp:ssl-allow no; mirror -R -P 10 -e $5 $6; quit"
 
 echo "Action complete"
 exit 0
