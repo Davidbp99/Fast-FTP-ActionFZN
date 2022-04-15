@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Fast FTP Action
-      uses: anvil-solutions/Fast-FTP-Action@2.1.0
+      uses: anvil-solutions/Fast-FTP-Action@2.1.3
       with:
         server: ftp.samkirkland.com
         username: myFtpUserName
