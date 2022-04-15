@@ -43,3 +43,4 @@ I recommend you store your FTP_PASSWORD as a secret.
 | `method`       | No        | sftp                       | ftp             | Protocol used (ftp or sftp) |
 | `local_dir`    | No        | ./build                    | .               | The local folder to copy, defaults to root project folder. |
 | `remote_dir`   | No        | ./serverFolder             | .               | The remote folder to copy to, deafults to root FTP folder. |
+| `port`         | No        | 22                         | .               | The port of the ftp/sftp (incase its special and not 22 or 21). |
